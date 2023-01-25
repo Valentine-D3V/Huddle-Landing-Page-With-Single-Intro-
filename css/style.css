@@ -97,7 +97,57 @@ select {
 
   --Body-Background: hsl(257, 40%, 49%);
   --Text-Color: hsl(0, 0%, 100%);
+  --Button-Background: hsl(0, 0%, 100%);
   --Hover: hsl(300, 69%, 71%);
 
   --Transition: 0.8s all;
 }
+
+/* *************** */
+/* LAYOUT */
+/* *************** */
+
+body {
+  display: grid;
+  place-content: center;
+  padding: 20px;
+  background: var(--Body-Background);
+  /* background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain; */
+}
+
+main {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.main-heading {
+  font-family: var(--Heading-FF);
+  color: var(--Text-Color);
+}
+
+.main-paragraph {
+  font-family: var(--Paragraph-FF);
+  color: var(--Text-Color);
+  margin-bottom: 20px;
+}
+
+.main-btn {
+  font-family: var(--Heading-FF);
+  background: var(--Button-Background);
+  padding: 16px 32px;
+  border-radius: 40px;
+}
+
+/* *************** */
+/* RESETS */
+/* *************** */
