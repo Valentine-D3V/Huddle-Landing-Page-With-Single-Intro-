@@ -98,7 +98,10 @@ select {
   --Body-Background: hsl(257, 40%, 49%);
   --Text-Color: hsl(0, 0%, 100%);
   --Button-Background: hsl(0, 0%, 100%);
+  --Button-Text: hsl(257, 40%, 49%);
   --Hover: hsl(300, 69%, 71%);
+
+  --Icon-Color: hsl(0, 0%, 100%);
 
   --Transition: 0.8s all;
 }
@@ -119,32 +122,32 @@ body {
 }
 
 .header-logo {
-  /* position: absolute;
-  top: 3%; */
   max-width: 210px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 main {
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
   margin-bottom: 20px;
 }
 
 .main-content-container {
-  margin-top: 42px;
+  /* margin-top: 42px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   text-align: center;
 }
+
 .main-heading {
   max-width: 20ch;
 
-  font-size: 40px;
+  font-size: 30px;
+  /* font-size: 40px; */
   font-family: var(--Heading-FF);
   color: var(--Text-Color);
 }
@@ -166,11 +169,15 @@ main {
   background: var(--Button-Background);
   padding: 16px 32px;
   border-radius: 40px;
+  color: var(--Button-Text);
 
   transition: var(--Transition);
+
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
 .main-btn:is(:hover, :focus-visible) {
+  color: var(--Text-Color);
   background: var(--Hover);
 }
 
@@ -184,46 +191,49 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 8px;
-}
-
-.social-media-link {
-  border: solid 1px white;
-  border-radius: 50px;
-  padding: 9px 9px;
+  gap: 16px;
 }
 
 .icon {
-  width: 26px;
-  fill: white;
-  aspect-ratio: 3/2;
-  object-fit: contain;
+  font-size: 24px;
+  color: var(--Icon-Color);
+  padding: 10px 12px;
+  border: solid 1px var(--Icon-Color);
+  border-radius: 50px;
 
   transition: var(--Transition);
 }
 
 .icon:is(:hover, :focus-visible) {
-  fill: var(--Hover);
+  color: var(--Hover);
+  border: solid 1px var(--Hover);
 }
 
 /* *************** */
 /* MEDIA QUERIES */
 /* *************** */
 
-@media (min-width: 1000px) {
+@media (min-width: 1150px) {
   body {
     background-image: url(/images/bg-desktop.svg);
     background-size: cover;
   }
 
+  .header-logo {
+    max-width: 210px;
+    margin-bottom: 80px;
+  }
+
   main {
     flex-direction: row;
+    gap: 50px;
   }
 
   .main-content-container {
     align-items: flex-start;
     gap: 20px;
     text-align: start;
+    margin-top: 42px;
   }
 
   .social-media-container {
