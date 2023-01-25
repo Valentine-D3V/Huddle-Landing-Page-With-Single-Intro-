@@ -95,6 +95,9 @@ select {
   --Heading-FF: "Poppins", sans-serif;
   --Paragraph-FF: "Open Sans", sans-serif;
 
+  --Heading-FS: clamp(1.63rem, calc(1.12rem + 2.53vw), 2.88rem);
+  --ParagraphL-FS: clamp(0.88rem, calc(0.77rem + 0.51vw), 1.13rem);
+
   --Body-Background: hsl(257, 40%, 49%);
   --Text-Color: hsl(0, 0%, 100%);
   --Button-Background: hsl(0, 0%, 100%);
@@ -135,7 +138,6 @@ main {
 }
 
 .main-content-container {
-  /* margin-top: 42px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,20 +147,22 @@ main {
 
 .main-heading {
   max-width: 20ch;
-
-  font-size: 30px;
-  /* font-size: 40px; */
+  font-size: var(--Heading-FS);
   font-family: var(--Heading-FF);
   color: var(--Text-Color);
+
+  transition: var(--Transition);
 }
 
 .main-paragraph {
   max-width: 50ch;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: var(--ParagraphL-FS);
   font-family: var(--Paragraph-FF);
   color: var(--Text-Color);
+  line-height: 1.6;
   margin-bottom: 2px;
+
+  transition: var(--Transition);
 }
 
 .main-btn {
@@ -185,6 +189,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 
 .social-media-list {
