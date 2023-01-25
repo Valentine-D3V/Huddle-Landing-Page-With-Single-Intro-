@@ -108,7 +108,6 @@ select {
 /* *************** */
 
 body {
-  /* position: relative; */
   display: grid;
   place-content: center;
   padding: 20px;
@@ -167,6 +166,18 @@ main {
   background: var(--Button-Background);
   padding: 16px 32px;
   border-radius: 40px;
+
+  transition: var(--Transition);
+}
+
+.main-btn:is(:hover, :focus-visible) {
+  background: var(--Hover);
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-media-list {
@@ -179,17 +190,24 @@ main {
 .social-media-link {
   border: solid 1px white;
   border-radius: 50px;
-  padding: 8px 12px;
-  display: grid;
-  place-content: center;
+  padding: 9px 9px;
 }
 
 .icon {
-  width: 20px;
+  width: 26px;
+  fill: white;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+
+  transition: var(--Transition);
+}
+
+.icon:is(:hover, :focus-visible) {
+  fill: var(--Hover);
 }
 
 /* *************** */
-/* MEDIQ QUERIES */
+/* MEDIA QUERIES */
 /* *************** */
 
 @media (min-width: 1000px) {
@@ -199,16 +217,18 @@ main {
   }
 
   main {
-    max-width: 1440px;
-    display: flex;
     flex-direction: row;
   }
 
   .main-content-container {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     text-align: start;
+  }
+
+  .social-media-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 }
