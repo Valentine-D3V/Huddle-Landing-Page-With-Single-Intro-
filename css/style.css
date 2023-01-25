@@ -102,6 +102,7 @@ select {
   --Text-Color: hsl(0, 0%, 100%);
   --Button-Background: hsl(0, 0%, 100%);
   --Button-Text: hsl(257, 40%, 49%);
+  --Icon-Color: hsl(0, 0%, 100%);
   --Hover: hsl(300, 69%, 71%);
 
   --Gradient-Background: linear-gradient(
@@ -112,7 +113,7 @@ select {
     hsl(300, 52%, 59%) 100%
   );
 
-  --Icon-Color: hsl(0, 0%, 100%);
+  --Box-Shadow: hsla(0, 0%, 0%, 0.3);
 
   --Transition: 0.8s all;
 }
@@ -125,10 +126,7 @@ body {
   position: relative;
   display: grid;
   place-content: center;
-  padding: 20px;
-  /* background: var(--Body-Background); */
-
-  z-index: 3;
+  padding: 1.25rem;
 }
 
 body::before {
@@ -142,7 +140,7 @@ body::before {
   background-size: cover;
   background-position: center;
   background-size: 300% 300%;
-  /* animation: Gradient 15s ease infinite; */
+  animation: Gradient 15s ease infinite;
   z-index: -2;
 }
 
@@ -159,14 +157,13 @@ body::after {
 }
 
 .header-logo {
-  max-width: 180px;
-  margin-bottom: 40px;
-
+  max-width: 11.25rem;
+  margin-bottom: 2.5rem;
   animation: Bounce 1s infinite alternate;
 }
 
 main {
-  max-width: 1440px;
+  max-width: 90rem;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -202,18 +199,18 @@ main {
 }
 
 .main-btn {
-  max-width: 200px;
+  max-width: 12.5rem;
   width: 100%;
   text-align: center;
   font-family: var(--Heading-FF);
   background: var(--Button-Background);
-  padding: 16px 32px;
-  border-radius: 40px;
+  padding: 1rem 2rem;
+  border-radius: 2.5rem;
   color: var(--Button-Text);
 
   transition: var(--Transition);
 
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.63rem 0.94rem -3px var(--Box-Shadow);
 }
 
 .main-btn:is(:hover, :focus-visible) {
@@ -225,22 +222,22 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 1.88rem;
 }
 
 .social-media-list {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .icon {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--Icon-Color);
-  padding: 10px 12px;
+  padding: 0.63rem 0.75rem;
   border: solid 1px var(--Icon-Color);
-  border-radius: 50px;
+  border-radius: 3.13rem;
 
   transition: var(--Transition);
 }
@@ -254,7 +251,7 @@ main {
 /* MEDIA QUERIES */
 /* *************** */
 
-@media (min-width: 1150px) {
+@media (min-width: 73.13em) {
   body::after {
     background-image: url(/images/bg-desktop.svg);
     background-size: cover;
@@ -262,24 +259,22 @@ main {
   }
 
   .header-logo {
-    max-width: 210px;
-    margin-bottom: 80px;
+    max-width: 13.13rem;
+    margin-bottom: 5rem;
   }
 
   main {
     flex-direction: row;
-    gap: 50px;
+    gap: 3.13rem;
   }
 
   .main-content-container {
     align-items: flex-start;
-    gap: 20px;
     text-align: start;
-    margin-top: 42px;
+    margin-top: 2.63rem;
   }
 
   .social-media-container {
-    display: flex;
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -294,7 +289,7 @@ main {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-0.63rem);
   }
 }
 
