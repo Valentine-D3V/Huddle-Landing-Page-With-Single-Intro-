@@ -86,3 +86,18 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* *************** */
+/* VARIABLES */
+/* *************** */
+
+:root {
+  --Heading-FF: "Poppins", sans-serif;
+  --Paragraph-FF: "Open Sans", sans-serif;
+
+  --Body-Background: hsl(257, 40%, 49%);
+  --Text-Color: hsl(0, 0%, 100%);
+  --Hover: hsl(300, 69%, 71%);
+
+  --Transition: 0.8s all;
+}
