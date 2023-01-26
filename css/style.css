@@ -95,7 +95,7 @@ select {
   --Heading-FF: "Poppins", sans-serif;
   --Paragraph-FF: "Open Sans", sans-serif;
 
-  --Heading-FS: clamp(1.63rem, calc(1.12rem + 2.53vw), 2.88rem);
+  --Heading-FS: clamp(1.63rem, calc(1.34rem + 1.43vw), 2.5rem);
   --ParagraphL-FS: clamp(0.88rem, calc(0.77rem + 0.51vw), 1.13rem);
 
   --Body-Background: hsl(257, 40%, 49%);
@@ -127,6 +127,7 @@ body {
   display: grid;
   place-content: center;
   padding: 1.25rem;
+  gap: 1.25rem;
 }
 
 body::before {
@@ -163,23 +164,21 @@ body::after {
 }
 
 main {
-  max-width: 90rem;
+  max-width: 81rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 1.25rem;
 }
 
 .main-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 1.13rem;
   text-align: center;
 }
 
 .main-heading {
-  max-width: 20ch;
   font-size: var(--Heading-FS);
   font-family: var(--Heading-FF);
   color: var(--Text-Color);
@@ -218,24 +217,28 @@ main {
   background: var(--Hover);
 }
 
+footer {
+  max-width: 80.5rem;
+}
+
 .social-media-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.88rem;
+  margin-top: 0.39rem;
 }
 
 .social-media-list {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 0.88rem;
 }
 
 .icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--Icon-Color);
-  padding: 0.63rem 0.75rem;
+  padding: 8.08px 10px;
   border: solid 1px var(--Icon-Color);
   border-radius: 3.13rem;
 
@@ -251,7 +254,7 @@ main {
 /* MEDIA QUERIES */
 /* *************** */
 
-@media (min-width: 73.13em) {
+@media (min-width: 73.75em) {
   body::after {
     background-image: url(../images/bg-desktop.svg);
     background-size: cover;
@@ -260,18 +263,18 @@ main {
 
   .header-logo {
     max-width: 13.13rem;
-    margin-bottom: 5rem;
+    margin: 2rem 0 3.75rem 0;
   }
 
   main {
     flex-direction: row;
-    gap: 3.13rem;
+    gap: 3.25rem;
   }
 
   .main-content-container {
     align-items: flex-start;
     text-align: start;
-    margin-top: 2.63rem;
+    margin-top: 2.75rem;
   }
 
   .social-media-container {
