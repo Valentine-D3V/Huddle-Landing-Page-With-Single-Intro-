@@ -138,7 +138,7 @@ body::before {
 
   background: var(--Gradient-Background);
   background-size: 200% 200%;
-  /* animation: Gradient 12s ease infinite; */
+  animation: Gradient 12s ease infinite;
   z-index: -2;
 }
 
@@ -162,7 +162,7 @@ header {
 .header-logo {
   max-width: 11.25rem;
   margin-bottom: 2.5rem;
-  /* animation: Bounce 1s infinite alternate; */
+  animation: Bounce 1s infinite alternate;
 }
 
 main {
